@@ -1,0 +1,4 @@
+Thường sẽ có 3 cách đặt tên:
+    - Passcal case (Viết hoa chữ cái đầu): tên file hoặc tên class (CustomerController)
+    - Camel case (Quy tắc con lạc đà): tên hàm, biên biến (userAction)
+    - Snake case (Con rắn): thường được đặt dữ liệu hay các key của mảng (ho_ten,nam_sinh)

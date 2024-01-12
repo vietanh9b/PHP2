@@ -1,0 +1,34 @@
+Lập trình hướng đối tượng(OOP - Object oriented programming)?
+ - Là 1 kỹ thuật lập trình có thể được sử dụng ở hầu hết các ngôn ngữ lập trình
+ - Nó chia bài toán thành 1 đối tượng để giải quyết
+
+Ưu điểm:
+- giúp tổ chức mã nguồn hiệu quả hơn
+- Các đối tượng có thể được xây dựng độc lập, giúp module hóa mã
+nguồn. Có thể sử dụng ở nhiều nới
+- Thuận lợi cho việc tái sử dụng
+- Tăng tính đồng nhất
+
+OOP có 4 tính chất cơ bản:
+- Đóng gói
+- Kế thừa
+- Đa hình
+- Trừu tượng
+
+Lớp (class):
+- Class là 1 khuôn mẫu dùng để tạo ra những object có cùng đặc điểm và hành động
+Một lớp là một kiểu dữ liệu bao gồm các thuộc tính và các phương
+thức được định nghĩa từ trước
+
+
+Đối tượng (Object): được tạo ra bởi class và mang những đặc điểm và hành động của class
+Một đối tượng bao gồm 2 thông tin: thuộc tính và phương thức.
+ - Thuộc tính chính là những thông tin, đặc điểm của đối tượng.
+ Ví dụ: con người có các đặc tính như mắt, mũi, tay, chân…
+ - Phương thức là những thao tác, hành động mà đối tượng đó có thể thực hiện.
+ Ví dụ: một người sẽ có thể thực hiện hành động nói, đi, ăn, uống, . . .
+
++ Thuộc tính: những thành phần cấu tạo hình thành lên đối tượng (là các biến trong class)
++ Phương thức: là hành động mà những đối tượng có thể thực hiện được (là các function trong class)
+
+** Lưu : 1 class tạo nhiều đối tượng nhưng 1 đối tượng chỉ được tạo bởi 1 class
