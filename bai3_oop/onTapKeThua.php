@@ -76,7 +76,7 @@ class GiangVien extends ConNguoi {
     }
 
     public function hienThiThongTinGiangVien(){
-        return $this->hienThiThongTin()."Tổng lương: ".$this->tongLuong();
+        return parent::hienThiThongTin()."Tổng lương: ".$this->tongLuong();
     }
 }
 

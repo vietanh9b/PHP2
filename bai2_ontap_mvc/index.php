@@ -4,17 +4,21 @@
 $url=isset($_GET['url']) ? $_GET['url'] : '/';
 require_once "Controllers/CustomerController.php";
 require_once "Models/Customer.php";
+$customerController=new CustomerController();
 switch ($url){
     case '/':
-        listCustomer();
+        $customerController->listCustomer();
         break;
     case 'add_customer':
-        addCustomerController();
+        $customerController->addCustomerController();
         break;
     case 'updateUser':
-        updateCustomerController();
+        $customerController->updateCustomerController();
+        break;
+    case 'detail_customer':
+        echo $customerController->detailCustomer();
         break;
     case 'deleteUser':
-        echo deleteCustomerController();
+        echo $customerController->deleteCustomerController();
         break;
 }

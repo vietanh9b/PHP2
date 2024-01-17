@@ -11,9 +11,9 @@
 </head>
 <body>
 <div class="container w-50 rounded border align-items-center mt-5 p-5">
-    <?php extract($getOneCustomer)?>
+    <?php extract($customer)?>
     <h3>Update user</h3>
-    <form action="" method="post">
+    <form action="?url=updateUser&id=<?= $_GET['id']?>" method="post">
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Name</label>
             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name" value="<?= $name?>">

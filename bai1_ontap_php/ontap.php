@@ -72,7 +72,8 @@ $myNull=null;
         'red' => 'Màu đỏ',
         'blue' => 'Màu xanh dương',
         'green' => 'Màu xanh lá',
-        'black' => 'Màu đen'
+        'black' => 'Màu đen',
+        'orange' => 'Màu cam'
     ];
 
     ?>

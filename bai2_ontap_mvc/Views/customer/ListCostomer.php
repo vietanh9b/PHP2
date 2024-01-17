@@ -34,7 +34,7 @@
                 <td><?= $value['phone']?></td>
                 <td>
                     <button type="button" class="btn btn-success">
-                        <a class="text-decoration-none text-white" href="?url=updateUser&id=<?= $value['id']?>">Sửa</a>
+                        <a class="text-decoration-none text-white" href="?url=detail_customer&id=<?= $value['id']?>">Sửa</a>
                     </button>
                 </td>
                 <td>
