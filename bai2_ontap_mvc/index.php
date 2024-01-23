@@ -16,9 +16,9 @@ switch ($url){
         $customerController->updateCustomerController();
         break;
     case 'detail_customer':
-        echo $customerController->detailCustomer();
+        $customerController->detailCustomer();
         break;
     case 'deleteUser':
-        echo $customerController->deleteCustomerController();
+        $customerController->deleteCustomerController();
         break;
 }
