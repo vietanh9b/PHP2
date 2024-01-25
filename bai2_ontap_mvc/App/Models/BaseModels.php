@@ -1,10 +1,12 @@
 <?php
+namespace App\Models;
 require_once "env.php";
+
 class BaseModels{
     protected $connect;
     public function __construct()
     {
-        $this->connect = new PDO(
+        $this->connect = new \PDO(
             "mysql:host=" . DBHOST
             . ";dbname=" . DBNAME
             . ";charset=" . DBCHARSET,

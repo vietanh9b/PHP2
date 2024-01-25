@@ -1,5 +1,8 @@
 <?php
-require_once "BaseModels.php";
+namespace App\Models;
+require "App/Models/BaseModels.php";
+use App\Models\BaseModels as BaseModels;
+
 class Customer extends BaseModels {
     public function getCustomer(){
         $sql='select * from user';

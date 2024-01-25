@@ -1,4 +1,7 @@
 <?php
+//require_once "App/Models/Customer.php";
+require_once "App/Models/Customer.php";
+use App\Models\Customer as Customer;
 class CustomerController{
     protected $customer;
     public function __construct()
