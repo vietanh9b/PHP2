@@ -1,0 +1,18 @@
+{
+    "name": "anhlv27/learn_autoload",
+    "description": "Learn autoload php",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Bai5\\": "./",
+            "App\\": ["app/","helpers/"]
+        },
+        "files":["helpers/function.php"]
+    },
+    "authors": [
+        {
+            "name": "anhlv27"
+        }
+    ],
+    "require": {}
+}
