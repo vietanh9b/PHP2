@@ -1,8 +1,9 @@
 <?php
-// file index giúp điều hướng tới các hàm ở trong controller
-
 $url=isset($_GET['url']) ? $_GET['url'] : '/';
-require_once "App/Controllers/CustomerController.php";
+//require_once "app/controllers/CustomerController.php";
+require_once "vendor/autoload.php";
+use App\Models\Customer;
+use App\Controllers\CustomerController;
 $customerController=new CustomerController();
 switch ($url){
     case '/':

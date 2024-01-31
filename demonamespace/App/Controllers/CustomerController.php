@@ -1,6 +1,6 @@
 <?php
 namespace App\Controller;
-require_once "App/Models/Customer.php";
+require_once "app/models/Customer.php";
 use App\Models\CustomerModel\Customer;
 
 class CustomerController{

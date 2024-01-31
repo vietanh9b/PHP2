@@ -1,0 +1,39 @@
+<!-- Kế thừa lại layout dùng chung -->
+<?php $_shouldextend[1]=1; ?>
+<?php $this->startSection('content'); ?>
+<table class="table">
+ <thead>
+ <tr>
+ <th scope="col">#</th>
+ <th scope="col">Tên</th>
+ <th scope="col">Email</th>
+ <th scope="col">Điện thoại</th>
+ <th scope="col">Sửa</th>
+ <th scope="col">Xóa</th>
+ </tr>
+ </thead>
+ <tbody>
+ <?php 
+ $i=0;
+ foreach($customers as $customer):?>
+ <tr>
+ <th scope="row"><?= $i+=1;?></th>
+ <td><?= $customer->name?></td>
+ <td><?= $customer->email?></td>
+ <td><?= $customer->phone?></td>
+ <td>
+ <button type="button" class="btn btn-success">
+ <a class="text-decoration-none text-white" href="?url=detail_customer&id=<?= $value['id']?>">Sửa</a>
+ </button>
+ </td>
+ <td>
+ <button type="button" class="btn btn-danger">
+ <a class="text-decoration-none text-white" href="?url=deleteUser&id=<?= $value['id']?>" onclick="return confirm('Bạn có chắc chắn muốn xóa người dùng này không?')">Xóa</a>
+ </button>
+ </td>
+ </tr>
+ <?php endforeach;?>
+ </tbody>
+</table>
+<?php $this->stopSection(); ?>
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('layout.main'); } ?>
