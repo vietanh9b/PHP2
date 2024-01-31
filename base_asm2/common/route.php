@@ -18,9 +18,7 @@ $router->filter('auth', function(){
 // khu vực cần quan tâm -----------
 
 // Khu vực định nghĩa ra các đường dẫn
-$router->get('/', function(){
-    return "Đây là trang chủ";
-});
+$router->get('/', [CustomerController::class,'list_customer']);
 
 $router->group(['prefix'=>'customer'],function($router){
     // định nghĩa các route trong group
@@ -28,6 +26,11 @@ $router->group(['prefix'=>'customer'],function($router){
     // add customer
     $router->get('add-customer',[CustomerController::class,'add_customer']);
     $router->post('add-customer',[CustomerController::class,'add_customer']);
+    // edit
+    $router->post('edit-customer/{id}',[CustomerController::class,'edit_customer']);
+    // detail
+    $router->get('detail-customer/{id}',[CustomerController::class,'edit_customer']);
+
 });
 
 // khu vực cần quan tâm -----------

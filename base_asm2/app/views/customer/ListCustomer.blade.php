@@ -17,29 +17,28 @@
     </tr>
   </thead>
   <tbody>
-    <?php 
-    $i=0;
-    foreach($customers as $customer):?>
+      @foreach($customers as $customer)
     <tr>
-      <th scope="row"><?= $i+=1;?></th>
+      <th scope="row">1</th>
       <td>
-      <img src="{{ BASE_URL.'public/image/' }}<?= $customer->image?>" alt="" width="100px">
+      <img src="{{ BASE_URL.'public/image/'.$customer->image }}" alt="" width="200px">
       </td>
-      <td><?= $customer->name?></td>
-      <td><?= $customer->email?></td>
-      <td><?= $customer->phone?></td>
+      <td>{{ $customer->name }}</td>
+      <td>{{ $customer->email }}</td>
+      <td>{{ $customer->phone }}</td>
       <td>
           <button type="button" class="btn btn-success">
-              <a class="text-decoration-none text-white" href="?url=detail_customer&id=<?= $value['id']?>">Sửa</a>
+              <a class="text-decoration-none text-white" href="{{ BASE_URL.'customer/detail-customer/'.$customer->id }}">Sửa</a>
           </button>
       </td>
+      
        <td>
           <button type="button" class="btn btn-danger">
-              <a class="text-decoration-none text-white" href="?url=deleteUser&id=<?= $value['id']?>" onclick="return confirm('Bạn có chắc chắn muốn xóa người dùng này không?')">Xóa</a>
+              <a class="text-decoration-none text-white" href="{{ BASE_URL.'customer/delete-customer/'.$customer->id }}" onclick="return confirm('Bạn có chắc chắn muốn xóa người dùng này không?')">Xóa</a>
           </button>
      </td>
     </tr>
-    <?php endforeach;?>
+    @endforeach
   </tbody>
 </table>
 @endsection

@@ -1,36 +1,39 @@
 <?php
 namespace App\Models;
-use App\Models\BaseModel;
 class Customer extends BaseModel{
-    public function getCustomer(){
-        $sql='SELECT * FROM `user`';
-        $this->setQuery($sql);
-        return $this->loadAllRows();
-    }
-
-    public function getCustomerName(){
-        $sql='SELECT name FROM `user`';
-        $this->setQuery($sql);
-        return $this->loadAllRows();
-    }
-        // public function getOneCustomer($id){
-        //     $sql="select * from user where id=$id";
-        //     return parent::dataProcess($sql,false);
-        // }
-
-        public function addCustomer($name,$email,$phone){
-            $sql="insert into user (name ,email,phone) value ('$name','$email','$phone');";
+        protected $table="user";
+        public function getCustomer(){
+            $sql="SELECT * FROM $this->table";
             $this->setQuery($sql);
-            return parent::execute();
+            return $this->loadAllRows();
         }
 
-        // public function updateCustomer($id_user,$name,$email,$phone){
-        //     $sql="UPDATE user SET name = '$name', email = '$email', phone = '$phone' WHERE id = '$id_user'";
-        //     parent::dataProcess($sql);
-        // }
+        public function getCustomerName(){
+            $sql="SELECT name FROM $this->table";
+            $this->setQuery($sql);
+            return $this->loadAllRows();
+        }
+        public function getOneCustomer($id){
+            $sql="select * from $this->table where id=$id";
+            $this->setQuery($sql);
+            return parent::loadRow();
+        }
 
-        // public function deleteCustomer($id){
-        //     $sql="DELETE FROM `user` WHERE `user`.`id` = $id";
-        //     return parent::dataProcess($sql);
-        // }
+        public function addCustomer($name,$email,$phone,$image){
+            $sql="insert into $this->table (name ,email,phone,image) value ('$name','$email','$phone','$image');";
+            $this->setQuery($sql);
+            parent::execute();
+        }
+
+        public function updateCustomer($id_user,$name,$email,$phone,$image){
+            $sql="UPDATE $this->table SET name = '$name', email = '$email', phone = '$phone',image='$image' WHERE id = '$id_user'";
+            $this->setQuery($sql);
+            parent::execute();
+        }
+
+        public function deleteCustomer($id){
+            $sql="DELETE FROM $this->table WHERE id = $id";
+            $this->setQuery($sql);
+            parent::execute();
+        }
 }
