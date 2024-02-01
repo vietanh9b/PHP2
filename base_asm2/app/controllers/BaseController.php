@@ -10,5 +10,4 @@ class BaseController{
         echo $blade->run($viewFile, $data);
     }
 }
-
 ?>

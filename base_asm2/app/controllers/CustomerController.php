@@ -124,4 +124,9 @@ class CustomerController extends BaseController{
         }
             $this->render("customer.EditCustomer",compact('customer'));
     }
+
+    public function delete_customer($id){
+        $this->customer->deleteCustomer($id);
+        $customers=$this->list_customer();
+    }
 }

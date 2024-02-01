@@ -19,7 +19,7 @@
   <tbody>
       @foreach($customers as $customer)
     <tr>
-      <th scope="row">1</th>
+      <th scope="row">#</th>
       <td>
       <img src="{{ BASE_URL.'public/image/'.$customer->image }}" alt="" width="200px">
       </td>

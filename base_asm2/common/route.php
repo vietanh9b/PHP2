@@ -30,7 +30,8 @@ $router->group(['prefix'=>'customer'],function($router){
     $router->post('edit-customer/{id}',[CustomerController::class,'edit_customer']);
     // detail
     $router->get('detail-customer/{id}',[CustomerController::class,'edit_customer']);
-
+    //delete
+    $router->get('delete-customer/{id}',[CustomerController::class,'delete_customer']);
 });
 
 // khu vực cần quan tâm -----------
