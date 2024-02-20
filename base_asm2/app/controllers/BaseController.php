@@ -2,7 +2,6 @@
 namespace App\Controllers;
 use eftec\bladeone\BladeOne;
 class BaseController{
-
     protected function render($viewFile, $data = []){
         $viewDir = "./app/views";
         $storageDir = "./storage";

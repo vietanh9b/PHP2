@@ -42,7 +42,7 @@ class CustomerController extends BaseController{
                     $error['name']='Tài khoản đã tồn tại';
                 }
             }
-            $pattern_name="^[A-Z]{1,}[a-z]{1,}[0-9]{1,}$";
+            $pattern_name="/^[A-Z]{1,}[a-z]{1,}[0-9]{1,}$/";
             if(strlen(trim($name))<8){
                 $error['name']='Tên phải lớn hơn hoặc bằng 8 ký tự';
             }

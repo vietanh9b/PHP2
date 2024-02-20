@@ -12,6 +12,7 @@
 <div class="container">
     <header>
         <div class="header-main">
+            @yield('header')
             <ul class="menu">
                 <li><a href="">Quản lý danh mục</a></li>
                 <li><a href="">Quản lý sản phẩm</a></li>
