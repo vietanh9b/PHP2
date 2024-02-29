@@ -8,7 +8,7 @@
             <label for="exampleInputEmail1" class="form-label">Name</label>
             <input type="text" class="form-control" id="exampleInputEmail1" name="name" placeholder="Your account name">
             <div class="error">
-                {{ isset($error['name']) ? $error['name'] : '' }} 
+                {{ isset($error['name']) ? $error['name'] : '' }}
             </div>
         </div>
         <div class="mb-3">

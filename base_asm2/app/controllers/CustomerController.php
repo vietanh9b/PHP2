@@ -12,7 +12,7 @@ class CustomerController extends BaseController{
         if($name){
             $customers=$this->customer->getCustomer();
             if ($customers !== false) {
-                $this->render("customer.ListCustomer", compact('customers'));
+                $this->render("c6xustomer.ListCustomer", compact('customers'));
             } else {
                 echo "Error fetching customer data";
             }
