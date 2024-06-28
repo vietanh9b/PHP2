@@ -95,6 +95,12 @@ $manager = new StudentManager();
 $manager->addStudent($student1);
 $manager->addStudent($student2);
 
-var_dump($manager->getStudents());
-var_dump($manager->getStudentById(2));
-var_dump($manager->getStudentsByGrade(9.0));
+// var_dump($manager->getStudents());
+// var_dump($manager->getStudentById(2));
+// var_dump($manager->getStudentsByGrade(9.0));
+
+
+$test=$_SERVER['HTTP_USER_AGENT'];
+// echo $test;
+$substract=fn($a,$b)=>$a-$b;
+echo $substract(1,2);

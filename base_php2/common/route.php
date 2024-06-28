@@ -1,8 +1,10 @@
 <?php
 
+use App\Controllers\CategoryController;
 use Phroute\Phroute\RouteCollector;
 use Phroute\Phroute\Dispatcher;
 use App\Controllers\CustomerController;
+use App\Controllers\ProductController;
 
 $url = !isset($_GET['url']) ? "/" : $_GET['url'];
 
@@ -18,7 +20,33 @@ $router->filter('auth', function(){
 // khu vực cần quan tâm -----------
 
 // Khu vực định nghĩa ra các đường dẫn
-$router->get('/', [CustomerController::class,'list_customer']);
+$router->get('/', [ProductController::class,'list']);
+$router->group(['prefix'=>'product'],function($router){
+    // định nghĩa các route trong group
+    $router->get('list',[ProductController::class,'list']);
+    // add
+    $router->get('add',[ProductController::class,'add']);
+    $router->post('add',[ProductController::class,'store']);
+    // edit
+    $router->get('edit/{id}',[ProductController::class,'edit']);
+    $router->post('edit/{id}',[ProductController::class,'edit']);
+    //delete
+    $router->get('delete/{id}',[ProductController::class,'delete']);
+});
+// category
+$router->group(['prefix'=>'category'],function($router){
+    // định nghĩa các route trong group
+    $router->get('list',[CategoryController::class,'list']);
+    // add
+    $router->get('add',[CategoryController::class,'add']);
+    $router->post('add',[CategoryController::class,'store']);
+    // edit
+    $router->get('edit/{id}',[CategoryController::class,'edit']);
+    $router->post('edit/{id}',[CategoryController::class,'edit']);
+    //delete
+    $router->get('delete/{id}',[CategoryController::class,'delete']);
+});
+// customer
 
 $router->group(['prefix'=>'customer'],function($router){
     // định nghĩa các route trong group

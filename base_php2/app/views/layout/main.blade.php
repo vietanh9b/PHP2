@@ -14,8 +14,8 @@
         <div class="header-main">
             @yield('header')
             <ul class="menu">
-                <li><a href="">Quản lý danh mục</a></li>
-                <li><a href="">Quản lý sản phẩm</a></li>
+                <li><a href="{{ BASE_URL.'category/list' }}">Category Management</a></li>
+                <li><a href="{{ BASE_URL.'product/list' }}">Product Management</a></li>
             </ul>
         </div>
     </header>
